@@ -1,8 +1,8 @@
-class Second implements Runnable{
+class Second  extends Thread{
     Second(){
-        Thread t = new Thread(this, "Demonstration one");
-        System.out.println("First thread created: "+ t);
-        t.start();
+        super("Demonstration one");
+        System.out.println("First thread created: " + this);
+        start();
     }
     public void run(){
         try{
